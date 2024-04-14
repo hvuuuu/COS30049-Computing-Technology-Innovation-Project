@@ -1,0 +1,100 @@
+/* Input field container */
+.Form_box_input {
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Input field */
+.Form_box_input input,
+.Form_box_input textarea {
+    width: 100%;
+    padding: 1rem 0.7rem; /* Adjusted padding */
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    font-size: 1.2rem;
+    transition: border-color 0.3s, transform 0.3s;
+    /* Additional styling */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field focus */
+.Form_box_input input:focus,
+.Form_box_input textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4); /* Adjusted box shadow */
+}
+
+/* Floating label */
+.Form_box_input label {
+    position: relative;
+    bottom: 1rem;
+    left: 0.3rem;
+    color:tomato;
+    pointer-events: none;
+    font-size: 1.6rem;
+    transform-origin: left bottom;
+}
+
+/* Input focus */
+.Form_box_input input:focus ~ label,
+.Form_box_input textarea:focus ~ label,
+.Form_box_input input:not(:placeholder-shown) ~ label,
+.Form_box_input textarea:not(:placeholder-shown) ~ label {
+    bottom: 4rem; /* Adjusted position when focused or has content */
+    font-size: 1rem;
+    color: #007bff;
+}
+
+
+.upload_box_btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-block: 4rem;
+    gap: 2.1rem;
+    margin-left: 23rem;
+}
+
+.upload_box_btn_style{
+    width: 100%;
+    display: grid;
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+.success_message {
+    position: fixed;
+    top: -50px; 
+    left: 0;
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 9999;
+    animation: slideIn 0.5s forwards; 
+}
+
+@keyframes slideIn {
+    0% {
+        top: -50px; 
+    }
+    100% {
+        top: 0; 
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        top: 0; 
+    }
+    100% {
+        top: -50px;
+    }
+}
+      
+
